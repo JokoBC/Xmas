@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Der Adventsstand – 24 Türchen mit dem AI Booth Designer</title>
+<meta name="description" content="Adventskalender-Spiel: Die KI hat den Messestand entworfen – du baust ihn in 24 Türchen auf.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="snow" aria-hidden="true"></div>
+
+<header>
+  <p class="kicker">Adventskalender · AI Booth Designer</p>
+  <h1>Der Adventsstand</h1>
+  <p class="lead">Die KI hat den Entwurf geliefert – jetzt wird gebaut. Hinter jedem Türchen steckt ein
+    Mini-Spiel. Wer es löst, bekommt ein Bauteil für den Weihnachtsstand.</p>
+</header>
+
+<main>
+  <section class="stage" aria-label="Dein Messestand">
+    <div class="stage-head">
+      <h2>Dein Stand</h2>
+      <span id="progress" class="pill">0 / 24 Teile</span>
+    </div>
+    <div id="booth"></div>
+    <p class="hint"><span class="swatch"></span> Gestrichelt: KI-Entwurf &nbsp;·&nbsp; Farbig: bereits aufgebaut</p>
+  </section>
+
+  <section class="calendar" aria-label="Kalender">
+    <div class="stage-head">
+      <h2>24 Türchen</h2>
+      <span id="today" class="pill"></span>
+    </div>
+    <div id="doors"></div>
+    <div class="tools">
+      <label class="switch"><input type="checkbox" id="demo"> Vorschau-Modus (alle Türchen sofort spielbar)</label>
+      <button id="reset" class="link">Fortschritt zurücksetzen</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Ein Fan-Spiel rund um den octanorm AI Booth Designer. Dein Fortschritt wird nur lokal in diesem Browser gespeichert.
+</footer>
+
+<div id="modal" class="modal" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button id="mClose" class="close" aria-label="Schließen">×</button>
+    <p id="mKicker" class="kicker"></p>
+    <h3 id="mTitle"></h3>
+    <p id="mText" class="mtext"></p>
+    <div id="mBody"></div>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
